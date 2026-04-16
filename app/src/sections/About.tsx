@@ -143,7 +143,7 @@ const About = () => {
           {/* Content */}
           <div ref={contentRef} className="space-y-6">
             <p className="text-lg text-white/70 leading-relaxed">
-              I&apos;m Alex Chen, a passionate software developer with over 5 years of experience
+              I&apos;m Lushegs, a passionate software developer with over 3 years of experience
               building digital products that make a difference. I specialize in creating
               modern, performant web applications that combine beautiful design with
               robust functionality.
@@ -151,7 +151,7 @@ const About = () => {
 
             <p className="text-lg text-white/70 leading-relaxed">
               My journey in tech started with a curiosity about how things work on the web,
-              which evolved into a career focused on crafting exceptional user experiences.
+              which evolved into a career focused on crafting exceptional solutions that solve real world problems.
               I believe in writing clean, maintainable code and staying at the forefront
               of modern development practices.
             </p>
