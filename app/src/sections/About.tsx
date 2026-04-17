@@ -12,9 +12,9 @@ const About = () => {
   const statsRef = useRef<HTMLDivElement>(null);
 
   const stats = [
-    { value: '5+', label: 'Years Experience' },
-    { value: '50+', label: 'Projects Completed' },
-    { value: '30+', label: 'Happy Clients' },
+    { value: '3+', label: 'Years Experience' },
+    { value: '6+', label: 'Projects Completed' },
+    { value: '20+', label: 'Happy Clients' },
     { value: '100%', label: 'Client Satisfaction' },
   ];
 
@@ -129,7 +129,7 @@ const About = () => {
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
               <img
                 src="/about-image.jpg"
-                alt="About Alex Chen"
+                alt="About Lushegs"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
