@@ -73,7 +73,7 @@ function App() {
       
       <CustomCursor />
       
-      <div ref={mainRef} className={`relative min-h-screen overflow-x-hidden transition-colors duration-400 ${isDarkMode ? 'bg-black text-white' : 'bg-zinc-100 text-zinc-900'}`}>
+      <div ref={mainRef} className="relative min-h-screen overflow-x-hidden">
         {/* Grain Overlay */}
         <div className="grain-overlay" />
         
