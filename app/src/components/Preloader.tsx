@@ -67,7 +67,7 @@ const Preloader = () => {
           className="font-display text-6xl md:text-8xl lg:text-9xl text-white tracking-wider"
           style={{ perspective: '1000px' }}
         >
-          ALEX CHEN
+          LU$HEGS
         </div>
 
         {/* Progress Bar Container */}
