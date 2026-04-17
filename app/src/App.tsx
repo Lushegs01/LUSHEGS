@@ -58,8 +58,13 @@ function App() {
   }, [isLoading]);
 
   const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-    document.documentElement.classList.toggle('dark');
+    const newMode = !isDarkMode;
+    setIsDarkMode(newMode);
+    if (newMode) {
+      document.documentElement.classList.remove('light');
+    } else {
+      document.documentElement.classList.add('light');
+    }
   };
 
   return (
@@ -68,7 +73,7 @@ function App() {
       
       <CustomCursor />
       
-      <div ref={mainRef} className="relative min-h-screen bg-black text-white overflow-x-hidden">
+      <div ref={mainRef} className={`relative min-h-screen overflow-x-hidden transition-colors duration-400 ${isDarkMode ? 'bg-black text-white' : 'bg-zinc-100 text-zinc-900'}`}>
         {/* Grain Overlay */}
         <div className="grain-overlay" />
         
