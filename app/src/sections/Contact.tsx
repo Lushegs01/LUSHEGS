@@ -20,8 +20,8 @@ const Contact = () => {
 
   const contactInfo = [
     { icon: Mail, label: 'Email', value: 'ire1bami@gmail.com', href: 'mailto:ire1bami@gmail.com' },
-    { icon: Phone, label: 'Phone', value: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-    { icon: MapPin, label: 'Location', value: 'San Francisco, CA', href: '#' },
+    { icon: Phone, label: 'Phone', value: '+234 (913) 525-3082', href: 'tel:+2349135253082' },
+    { icon: MapPin, label: 'Location', value: 'Lagos, NG', href: '#' },
   ];
 
   const socialLinks = [
