@@ -2,11 +2,14 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Github, GitCommit, GitBranch, Star, Users, Award } from 'lucide-react';
+
 gsap.registerPlugin(ScrollTrigger);
+
 const GitHubStats = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const statsRef = useRef<HTMLDivElement>(null);
   const [contributionCount, setContributionCount] = useState(0);
+
   // Simulated GitHub stats
   const githubStats = {
     contributions: 100,
@@ -16,6 +19,7 @@ const GitHubStats = () => {
     pullRequests: 156,
     issues: 89,
   };
+
   const languages = [
     { name: 'TypeScript', percentage: 45, color: '#3178c6' },
     { name: 'JavaScript', percentage: 78, color: '#f7df1e' },
@@ -23,6 +27,7 @@ const GitHubStats = () => {
     { name: 'CSS', percentage: 92, color: '#1572b6' },
     { name: 'Other', percentage: 5, color: '#999999' },
   ];
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Animate stat cards
@@ -43,6 +48,7 @@ const GitHubStats = () => {
           },
         }
       );
+
       // Animate contribution counter
       gsap.to(
         { value: 0 },
@@ -60,6 +66,7 @@ const GitHubStats = () => {
           },
         }
       );
+
       // Animate language bars
       const langBars = sectionRef.current?.querySelectorAll('.lang-bar');
       langBars?.forEach((bar) => {
@@ -80,14 +87,17 @@ const GitHubStats = () => {
         );
       });
     }, sectionRef);
+
     return () => ctx.revert();
   }, []);
+
   const statCards = [
     { icon: GitCommit, label: 'Contributions', value: contributionCount.toLocaleString() },
     { icon: GitBranch, label: 'Repositories', value: githubStats.repositories },
     { icon: Star, label: 'Total Stars', value: githubStats.stars },
     { icon: Users, label: 'Followers', value: githubStats.followers },
   ];
+
   return (
     <section
       ref={sectionRef}
@@ -108,6 +118,7 @@ const GitHubStats = () => {
             projects and contributions.
           </p>
         </div>
+
         {/* GitHub Profile Link */}
         <div className="flex justify-center mb-12">
           <a
@@ -123,6 +134,7 @@ const GitHubStats = () => {
             </span>
           </a>
         </div>
+
         {/* Stats Grid */}
         <div
           ref={statsRef}
@@ -143,12 +155,14 @@ const GitHubStats = () => {
             </div>
           ))}
         </div>
+
         {/* Contribution Graph (Simulated) */}
         <div className="glass rounded-xl p-6 mb-8">
           <div className="flex items-center justify-between mb-6">
             <h3 className="text-white font-medium">Contribution Activity</h3>
             <span className="text-sm text-white/50">Last 12 months</span>
           </div>
+
           {/* Simulated GitHub-style contribution grid */}
           <div className="grid grid-cols-12 gap-1">
             {Array.from({ length: 84 }).map((_, i) => {
@@ -158,6 +172,7 @@ const GitHubStats = () => {
               else if (intensity > 0.6) bgClass = 'bg-red-600/70';
               else if (intensity > 0.4) bgClass = 'bg-red-600/50';
               else if (intensity > 0.2) bgClass = 'bg-red-600/30';
+
               return (
                 <div
                   key={i}
@@ -167,6 +182,7 @@ const GitHubStats = () => {
               );
             })}
           </div>
+
           <div className="flex items-center justify-end gap-2 mt-4 text-xs text-white/40">
             <span>Less</span>
             <div className="flex gap-1">
@@ -179,9 +195,11 @@ const GitHubStats = () => {
             <span>More</span>
           </div>
         </div>
+
         {/* Language Stats */}
         <div className="glass rounded-xl p-6">
           <h3 className="text-white font-medium mb-6">Top Languages</h3>
+
           <div className="space-y-4">
             {languages.map((lang) => (
               <div key={lang.name}>
@@ -209,6 +227,7 @@ const GitHubStats = () => {
             ))}
           </div>
         </div>
+
         {/* Achievements */}
         <div className="mt-8 grid md:grid-cols-3 gap-4">
           {[
@@ -234,4 +253,5 @@ const GitHubStats = () => {
     </section>
   );
 };
+
 export default GitHubStats;
