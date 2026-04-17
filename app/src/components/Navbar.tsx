@@ -102,7 +102,7 @@ const Navbar = ({ isDarkMode, toggleTheme }: NavbarProps) => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
             >
-              ALEX<span className="text-red-500">.</span>
+              .<span className="text-red-500">LUSHEGS</span>
             </a>
 
             {/* Desktop Navigation */}
