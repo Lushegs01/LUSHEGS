@@ -26,6 +26,29 @@
     --input: 0 0% 15%;
     --ring: 0 100% 50%;
     --radius: 0.5rem;
+
+    /* Theme tokens */
+    --bg-primary: #000000;
+    --bg-card: #0a0a0a;
+    --text-primary: #ffffff;
+    --text-muted: rgba(255,255,255,0.6);
+    --border-color: rgba(255,255,255,0.08);
+    --glass-bg: rgba(255,255,255,0.03);
+    --glass-strong-bg: rgba(10,10,10,0.8);
+    --scrollbar-track: #0a0a0a;
+    --scrollbar-thumb: #333;
+  }
+
+  .light {
+    --bg-primary: #f4f4f5;
+    --bg-card: #ffffff;
+    --text-primary: #0a0a0a;
+    --text-muted: rgba(0,0,0,0.55);
+    --border-color: rgba(0,0,0,0.1);
+    --glass-bg: rgba(0,0,0,0.04);
+    --glass-strong-bg: rgba(255,255,255,0.85);
+    --scrollbar-track: #e4e4e7;
+    --scrollbar-thumb: #a1a1aa;
   }
 }
 
@@ -39,9 +62,12 @@
   }
   
   body {
-    @apply bg-black text-white antialiased;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    @apply antialiased;
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease;
   }
   
   ::selection {
@@ -56,11 +82,11 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: var(--scrollbar-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: var(--scrollbar-thumb);
   border-radius: 3px;
 }
 
@@ -79,17 +105,17 @@
 
 /* Glassmorphism */
 .glass {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--glass-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-color);
 }
 
 .glass-strong {
-  background: rgba(10, 10, 10, 0.8);
+  background: var(--glass-strong-bg);
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-color);
 }
 
 /* Neumorphism */
