@@ -12,19 +12,19 @@ const GitHubStats = () => {
 
   // Simulated GitHub stats
   const githubStats = {
-    contributions: 1247,
-    repositories: 48,
-    stars: 342,
-    followers: 523,
+    contributions: 100+,
+    repositories: 23,
+    stars: 2,
+    followers: 1,
     pullRequests: 156,
     issues: 89,
   };
 
   const languages = [
     { name: 'TypeScript', percentage: 45, color: '#3178c6' },
-    { name: 'JavaScript', percentage: 25, color: '#f7df1e' },
-    { name: 'Python', percentage: 15, color: '#3776ab' },
-    { name: 'CSS', percentage: 10, color: '#1572b6' },
+    { name: 'JavaScript', percentage: 78, color: '#f7df1e' },
+    { name: 'Python', percentage: 89, color: '#3776ab' },
+    { name: 'CSS', percentage: 92, color: '#1572b6' },
     { name: 'Other', percentage: 5, color: '#999999' },
   ];
 
@@ -128,7 +128,7 @@ const GitHubStats = () => {
             className="group flex items-center gap-3 px-6 py-3 glass rounded-full hover:bg-white/10 transition-all duration-300"
           >
             <Github className="w-6 h-6 text-white" />
-            <span className="text-white font-medium">@alexchendev</span>
+            <span className="text-white font-medium">@Lushegs01</span>
             <span className="px-2 py-0.5 bg-green-500/20 text-green-500 text-xs rounded-full">
               Active
             </span>
@@ -232,7 +232,7 @@ const GitHubStats = () => {
         <div className="mt-8 grid md:grid-cols-3 gap-4">
           {[
             { icon: Award, title: 'Arctic Code Vault', desc: 'Contributed code to the 2020 GitHub Archive Program' },
-            { icon: Star, title: 'Top Contributor', desc: 'Recognized in React ecosystem' },
+            { icon: Star, title: 'Top User', desc: 'Recognized in HTML ecosystem' },
             { icon: Users, title: 'Prolific Contributor', desc: '100+ pull requests merged' },
           ].map((achievement) => (
             <div
