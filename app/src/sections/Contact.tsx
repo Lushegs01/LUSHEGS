@@ -19,7 +19,7 @@ const Contact = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const contactInfo = [
-    { icon: Mail, label: 'Email', value: 'hello@alexchen.dev', href: 'mailto:hello@alexchen.dev' },
+    { icon: Mail, label: 'Email', value: 'ire1bami@gmail.com', href: 'mailto:ire1bami@gmail.com' },
     { icon: Phone, label: 'Phone', value: '+1 (555) 123-4567', href: 'tel:+15551234567' },
     { icon: MapPin, label: 'Location', value: 'San Francisco, CA', href: '#' },
   ];
@@ -348,7 +348,7 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left">
-              <h3 className="font-display text-3xl text-white mb-2">ALEX CHEN</h3>
+              <h3 className="font-display text-3xl text-white mb-2">LUSHEGS</h3>
               <p className="text-white/50 text-sm">Building digital experiences that matter.</p>
             </div>
 
@@ -369,7 +369,7 @@ const Contact = () => {
             </div>
 
             <p className="text-white/30 text-sm">
-              © {new Date().getFullYear()} Alex Chen. All rights reserved.
+              © {new Date().getFullYear()} LUSHEGS. All rights reserved.
             </p>
           </div>
         </div>
