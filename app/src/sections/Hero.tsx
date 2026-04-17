@@ -266,7 +266,7 @@ const Hero = () => {
                 <img
                   src="/hero-profile.jpg"
                   alt="LUSHEGS"
-                  className="w-full h-full object-cover"
+                   className="w-full h-full object-cover object-top"
                 />
 
                 {/* Overlay */}
