@@ -234,9 +234,9 @@ const Hero = () => {
             {/* Social Links */}
             <div className="flex gap-4 justify-center lg:justify-start">
               {[
-                { icon: Github, href: 'https://github.com', label: 'GitHub' },
+                { icon: Github, href: 'https://github.com/Lushegs01', label: 'GitHub' },
                 { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-                { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
+                { icon: Twitter, href: 'https://twitter.com/thereal_lushegs', label: 'Twitter' },
               ].map((social) => (
                 <a
                   key={social.label}
@@ -265,7 +265,7 @@ const Hero = () => {
               <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-white/10">
                 <img
                   src="/hero-profile.jpg"
-                  alt="Alex Chen"
+                  alt="LUSHEGS"
                   className="w-full h-full object-cover"
                 />
 
@@ -279,10 +279,10 @@ const Hero = () => {
 
               {/* Floating Badges */}
               <div className="absolute -right-4 top-1/4 glass px-4 py-2 rounded-full animate-float">
-                <span className="text-sm font-medium text-white">5+ Years</span>
+                <span className="text-sm font-medium text-white">3+ Years</span>
               </div>
               <div className="absolute -left-4 bottom-1/4 glass px-4 py-2 rounded-full animate-float" style={{ animationDelay: '1s' }}>
-                <span className="text-sm font-medium text-white">50+ Projects</span>
+                <span className="text-sm font-medium text-white">6+ Projects</span>
               </div>
             </div>
           </div>
