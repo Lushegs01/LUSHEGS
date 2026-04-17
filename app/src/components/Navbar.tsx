@@ -102,7 +102,7 @@ const Navbar = ({ isDarkMode, toggleTheme }: NavbarProps) => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
             >
-              LUSHEGS<span className="text-red-500">.</span>
+              ALEX<span className="text-red-500">.</span>
             </a>
 
             {/* Desktop Navigation */}
@@ -140,12 +140,9 @@ const Navbar = ({ isDarkMode, toggleTheme }: NavbarProps) => {
               {/* Download CV */}
               <a
                 href="https://drive.google.com/file/d/10M2opSMT4G7tv_jkDqpJXjz25WnGh3Je/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hidden md:flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-full transition-colors"
-                onClick={(e) => {
-                  e.preventDefault();
-                  // Simulate CV download
-                  alert('CV download coming soon!');
-                }}
               >
                 <Download className="w-4 h-4" />
                 CV
@@ -205,11 +202,9 @@ const Navbar = ({ isDarkMode, toggleTheme }: NavbarProps) => {
           {/* Mobile Download CV */}
           <a
             href="https://drive.google.com/file/d/10M2opSMT4G7tv_jkDqpJXjz25WnGh3Je/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-8 flex items-center gap-2 px-6 py-3 bg-red-600 text-white font-medium rounded-full"
-            onClick={(e) => {
-              e.preventDefault();
-              alert('CV download coming soon!');
-            }}
           >
             <Download className="w-5 h-5" />
             Download CV
